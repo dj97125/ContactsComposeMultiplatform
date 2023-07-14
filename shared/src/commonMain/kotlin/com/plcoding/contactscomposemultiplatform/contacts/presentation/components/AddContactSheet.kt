@@ -3,24 +3,12 @@ package com.plcoding.contactscomposemultiplatform.contacts.presentation.componen
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Add
 import androidx.compose.material.icons.rounded.Close
-import androidx.compose.material3.Button
-import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.Text
+import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -52,7 +40,7 @@ fun AddContactSheet(
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Spacer(Modifier.height(60.dp))
-                if(newContact?.photoBytes == null) {
+                if (newContact?.photoBytes == null) {
                     Box(
                         modifier = Modifier
                             .size(150.dp)
@@ -167,7 +155,7 @@ private fun ContactTextField(
             shape = RoundedCornerShape(20.dp),
             modifier = Modifier.fillMaxWidth()
         )
-        if(error != null) {
+        if (error != null) {
             Text(
                 text = error,
                 color = MaterialTheme.colorScheme.error

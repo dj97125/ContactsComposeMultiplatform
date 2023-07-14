@@ -2,13 +2,7 @@ package com.plcoding.contactscomposemultiplatform.core.presentation
 
 import androidx.compose.runtime.Composable
 import kotlinx.cinterop.refTo
-import platform.UIKit.UIImage
-import platform.UIKit.UIImageJPEGRepresentation
-import platform.UIKit.UIImagePickerController
-import platform.UIKit.UIImagePickerControllerDelegateProtocol
-import platform.UIKit.UIImagePickerControllerSourceType
-import platform.UIKit.UINavigationControllerDelegateProtocol
-import platform.UIKit.UIViewController
+import platform.UIKit.*
 import platform.darwin.NSObject
 import platform.posix.memcpy
 

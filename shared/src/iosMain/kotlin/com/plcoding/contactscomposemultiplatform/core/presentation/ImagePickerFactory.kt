@@ -6,7 +6,7 @@ import platform.UIKit.UIViewController
 
 actual class ImagePickerFactory(
     private val rootController: UIViewController
-){
+) {
 
     @Composable
     actual fun createPicker(): ImagePicker {

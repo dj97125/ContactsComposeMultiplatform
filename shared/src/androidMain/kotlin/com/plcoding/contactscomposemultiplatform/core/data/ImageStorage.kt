@@ -3,7 +3,7 @@ package com.plcoding.contactscomposemultiplatform.core.data
 import android.content.Context
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import java.util.UUID
+import java.util.*
 
 actual class ImageStorage(
     private val context: Context

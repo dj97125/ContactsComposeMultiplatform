@@ -28,14 +28,14 @@ fun ContactPhoto(
     val bitmap = rememberBitmapFromBytes(contact?.photoBytes)
     val photoModifier = modifier.clip(RoundedCornerShape(35))
 
-    if(bitmap != null) {
+    bitmap?.let {
         Image(
             bitmap = bitmap,
             contentDescription = contact?.firstName,
             modifier = photoModifier,
             contentScale = ContentScale.Crop
         )
-    } else {
+    } ?: run {
         Box(
             modifier = photoModifier
                 .background(MaterialTheme.colorScheme.secondaryContainer),
@@ -49,4 +49,5 @@ fun ContactPhoto(
             )
         }
     }
+
 }

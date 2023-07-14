@@ -5,20 +5,20 @@ object ContactValidator {
     fun validateContact(contact: Contact): ValidationResult {
         var result = ValidationResult()
 
-        if(contact.firstName.isBlank()) {
+        if (contact.firstName.isBlank()) {
             result = result.copy(firstNameError = "The first name can't be empty.")
         }
 
-        if(contact.lastName.isBlank()) {
+        if (contact.lastName.isBlank()) {
             result = result.copy(lastNameError = "The last name can't be empty.")
         }
 
         val emailRegex = Regex("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}\$")
-        if(!emailRegex.matches(contact.email)) {
+        if (!emailRegex.matches(contact.email)) {
             result = result.copy(emailError = "This is not a valid email.")
         }
 
-        if(contact.phoneNumber.isBlank()) {
+        if (contact.phoneNumber.isBlank()) {
             result = result.copy(phoneNumberError = "The phone number can't be empty.")
         }
 

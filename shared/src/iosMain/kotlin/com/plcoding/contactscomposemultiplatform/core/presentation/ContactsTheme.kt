@@ -2,8 +2,8 @@ package com.plcoding.contactscomposemultiplatform.core.presentation
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
-import com.plcoding.contactscomposemultiplatform.ui.theme.DarkColorScheme
-import com.plcoding.contactscomposemultiplatform.ui.theme.LightColorScheme
+import com.plcoding.contactscomposemultiplatform.ui.theme.theme.DarkColors
+import com.plcoding.contactscomposemultiplatform.ui.theme.theme.LightColors
 import com.plcoding.contactscomposemultiplatform.ui.theme.Typography
 
 @Composable
@@ -13,7 +13,7 @@ actual fun ContactsTheme(
     content: @Composable () -> Unit
 ) {
     MaterialTheme(
-        colorScheme = if(darkTheme) DarkColorScheme else LightColorScheme,
+        colorScheme = if (darkTheme) DarkColors else LightColors,
         typography = Typography,
         content = content
     )

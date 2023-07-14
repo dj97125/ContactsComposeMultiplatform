@@ -1,12 +1,6 @@
 package com.plcoding.contactscomposemultiplatform.contacts.presentation.components
 
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Text
@@ -25,7 +19,7 @@ fun RecentlyAddedContacts(
     Column(
         modifier = modifier
     ) {
-        if(contacts.isNotEmpty()) {
+        if (contacts.isNotEmpty()) {
             Text(
                 text = "Recently Added",
                 modifier = Modifier
